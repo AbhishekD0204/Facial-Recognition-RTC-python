@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title> <!-- Title kept as "Login" -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8; /* Light grey background for a clean look */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+        }
+        .container {
+            max-width: 500px;
+            background: rgba(0, 51, 102, 0.8); /* Dark blue background for the container */
+            padding: 60px; /* Adjusted padding for a more compact look */
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            text-align: center; /* Center text inside the container */
+            color: white; /* White text for better contrast */
+        }
+        h1 {
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 24px; /* Increased font size for the title */
+            text-decoration: underline;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 90%;
+            padding: 15px;
+            margin: 15px 0;
+            border: 2.5px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px; 
+        }
+        input[type="submit"] {
+            width: 100%; 
+            padding: 15px;
+            background-color: #0056b3; 
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+        input[type="submit"]:hover {
+            background-color: #003d80; 
+        }
+        .nav {
+            text-align: center;
+            margin-top: 20px;
+            position: absolute; 
+            bottom: 20px; 
+            left: 50%;
+            transform: translateX(-50%); 
+        }
+        .nav a {
+            text-decoration: none;
+            color: #0056b3;
+            font-weight: bold;
+            margin: 0 10px; 
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form method="POST" action="/login">
+            <input type="text" name="username" placeholder="USERNAME" required><br>
+            <input type="password" name="password" placeholder="PASSWORD" required><br>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+    <div class="nav">
+        <a href="/operator">Operators Page</a>
+    </div>
+</body>
+</html>
